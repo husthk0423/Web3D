@@ -40,6 +40,14 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource', // 处理字体文件
             },
+            {
+                test: /\.glsl$/,//处理glsl文件
+                use: [
+                  'raw-loader', // 将 GLSL 文件作为字符串导入
+                  path.resolve(__dirname, 'src/loaders/glsl-tokenizer-loader.js') // 使用自定义的 GLSL 加载器
+                ],
+              },
+
         ],
     },
     plugins: [
