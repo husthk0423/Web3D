@@ -2,10 +2,10 @@
 import './assets/styles/style.css';
 import exampleImage from './assets/images/example.png';
 import circleBase from './js/circleBase';
-import testGetSet  from './js/testGetSet';
-import vertexShader from './shaders/vertexShader.js';
-import fragmentShader from './shaders/fragmentShader.js';
-import anotherShader from './shaders/subdir/anotherShader.js';
+// import testGetSet  from './js/testGetSet';
+// import vertexShader from './shaders/vertexShader.js';
+// import fragmentShader from './shaders/fragmentShader.js';
+// import anotherShader from './shaders/subdir/anotherShader.js';
 
 // 动态加载 src/js 目录下的所有JS文件
 const requireContext = require.context('./js', false, /\.js$/);
