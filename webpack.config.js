@@ -16,6 +16,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+  
     },
     module: {
         rules: [
@@ -53,6 +54,9 @@ module.exports = {
         }),
         new GlslToJsPlugin(),
     ],
+    resolve: {
+        extensions: ['.js', '.glsl'], // 允许解析这两种扩展名的文件
+      },
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
